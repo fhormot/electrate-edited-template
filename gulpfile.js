@@ -18,24 +18,24 @@ gulp.task('css', () => {
 });
 
 gulp.task('js', () => {
-    return gulp.src(['main.js', 'src/**/*.js'])
-         .pipe(babel())
-         .pipe(gulp.dest('app/'))
-         .pipe(livereload());
+    return gulp.src(['public/**/*.js', 'src/**/*.js'])
+        .pipe(babel())
+        .pipe(gulp.dest('app/'))
+        .pipe(livereload());
 });
 
 gulp.task('images', () => {
     return gulp.src('src/assets/*')
-         .pipe(gulp.dest('app/assets'))
-         .pipe(livereload());
+        .pipe(gulp.dest('app/assets'))
+        .pipe(livereload());
 })
 
 gulp.task('watch', async function() {
-  livereload.listen();
-  gulp.watch('src/**/*.html', gulp.series('html'));
-  gulp.watch('src/**/*.css', gulp.series('css'));
-  gulp.watch('src/**/*.js', gulp.series('js'));
-  gulp.watch('src/assets/**/*', gulp.series('images'));
+    livereload.listen();
+    gulp.watch('src/**/*.html', gulp.series('html'));
+    gulp.watch('src/**/*.css', gulp.series('css'));
+    gulp.watch('src/**/*.js', gulp.series('js'));
+    gulp.watch('src/assets/**/*', gulp.series('images'));
 });
 
 gulp.task('build', gulp.series('html', 'css', 'js', 'images'));
@@ -56,6 +56,6 @@ gulp.task('release', gulp.series('build', () => {
 
 gulp.task('make-icon', () => {
     return exec(
-         __dirname+'/node_modules/.bin/electron-icon-maker --input='+__dirname+'/assets/logo.png --output=.'
+        __dirname+'/node_modules/.bin/electron-icon-maker --input='+__dirname+'/assets/logo.png --output=.'
     ).on('close', () => process.exit());
 });

@@ -1,10 +1,6 @@
 # Electrate
 
-<p align="center"> 
-  <img src="https://github.com/mmick66/electrate/blob/master/assets/logo.png">
-</p>
-
-This is a simple [Electron](https://electronjs.org/) + [React.js](https://reactjs.org/) template (with live reload). It was designed to work without the need of a development server running in the background, like so many other templates, and it's hence free of cross domain request constraints ([CORS](https://reactjs.org/)). It's further explained [in my article on Medium](https://medium.com/@michael.m/creating-an-electron-and-react-template-5173d086549a).
+This template is my personal variation of [Electrate](https://github.com/mmick66/electrate).
 
 ## Installing
 
@@ -12,7 +8,7 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/mmick66/electrate my-app
+git clone https://github.com/fhormot/electrate-edited-template my-app
 # Go into the repository
 cd my-app
 # Install dependencies
@@ -43,17 +39,6 @@ npm run release
 
 Check the `dist` folder for the app
 
-
-## How Electron Works with React
-
-This template compiles all `*.js` files in `src` into standard JS and copies it to `app`. There it includes `*.html` and `*.css` together with the `main.js` start file. From then it runs and packages using `gulp` as run through `npm`.
-
-
-<p align="center"> 
-  <img src="https://preview.ibb.co/jF9Akx/electron_sequence.png" alt="electron_sequence" border="0">
-</p>
-
-
 ## Extending the Template
 
 Some useful tools include:
@@ -65,5 +50,5 @@ Some useful tools include:
 
 ## Copyright
 
-The template is made available through the [Creative Commons Licence](https://creativecommons.org/publicdomain/zero/1.0/). The logo icon was provided by [Vecteezy](https://www.vecteezy.com/).
+The template is made available through the [Creative Commons Licence](https://creativecommons.org/publicdomain/zero/1.0/).
 
